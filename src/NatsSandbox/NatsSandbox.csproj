@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    
+    <!-- Package metadata -->
+    <PackageId>NatsSandbox</PackageId>
+    <Title>NatsSandbox</Title>
+    <Description>Temporary and disposable NATS server for integration tests and local debugging.</Description>
+    <Authors>Wassim K</Authors>
+    <PackageTags>nats;testing;integration-tests;sandbox;messaging;jetstream</PackageTags>
+    <PackageProjectUrl>https://github.com/wassim-k/NatsSandbox</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wassim-k/NatsSandbox</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NATS.Client.Core" Version="2.5.1" />
+    <PackageReference Include="SharpCompress" Version="0.41.0" />
+	<PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.183">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
