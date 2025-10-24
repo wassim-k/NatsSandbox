@@ -1,0 +1,25 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.cs     text diff=csharp
+*.csproj text
+*.sln    text
+
+# Scripts
+*.ps1    text eol=crlf
+*.sh     text eol=lf
+
+# Documentation
+*.md     text
+*.txt    text
+
+# Config files
+*.json   text
+*.yml    text
+*.yaml   text
+*.xml    text
+
+# Git files
+.gitattributes text
+.gitignore     text

@@ -1,0 +1,10 @@
+# On main, generate a prerelease version (like "1.0.4-preview.2") at each commit unless a tag is present
+mode: ContinuousDelivery
+
+# Use exact same NuGet package version as assembly informational format, without any additional suffix like the commit hash
+assembly-informational-format: "{SemVer}"
+
+branches:
+  main:
+    # Use "preview" for prerelease version suffix, like "1.0.4-preview.2"
+    label: preview
